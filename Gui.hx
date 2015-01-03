@@ -130,6 +130,9 @@ class Gui {
 			collapseLinksEditor();
 	}
 	
+/**
+ *  At present, just resets all textarea fields
+ */
 	public function reset():Void {
 		for (textarea in this.textareas) {
 			textarea.value = "";
