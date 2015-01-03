@@ -141,6 +141,7 @@ class Gui {
 	
 	/*  Private Methods
 	=========================================================================*/
+//  Eventually, I may need to generalize the below to avoid code duplication
 	private function expandTypenameEditor():Void {
 		collapseLinksEditor();
 		collapseCodeEditor();
