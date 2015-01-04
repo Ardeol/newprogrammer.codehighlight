@@ -3,7 +3,7 @@ package com.newprogrammer.codehighlight.parser;
 /** Parser Class
  *  @author		Timothy Foster
  * 	@version	0.00.141230
- ** Wrapper for the parse() method.  parse() will take an input string and transform it
+ *  Wrapper for the parse() method.  parse() will take an input string and transform it
  *  according to the rules of the given language and productions.
  */
 class Parser {
@@ -12,6 +12,7 @@ class Parser {
  *  @param	code	The code to highlight using the provided production rules
  *  @param	language	The programming language to highlight for
  *  @param	format	Rules governing the format of the output
+ *  @return	Parsed text corresponding to the input code
  */
 	public static function parse(code:String, language:LanguageRules, productions:ProductionRules):String {
 		var input = code;
@@ -21,6 +22,9 @@ class Parser {
 		return output.toString();
 	}
 	
+/**
+ *  @private
+ */
 	private static function parseToken(input:String, output:StringBuf, tokenRules:Array<TokenRule>, productions:ProductionRules):String {
 	/*  This recursive method will repeatedly parse tokens until there is nothing left
 	 *  to parse or until a null/0-length token array is encountered.
